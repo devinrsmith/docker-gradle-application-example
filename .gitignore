@@ -1,0 +1,9 @@
+build
+.gradle
+*.iws
+*.ipr
+*.iml
+.idea
+out
+workspace
+logs

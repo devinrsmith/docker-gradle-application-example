@@ -1,0 +1,11 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+mainClassName = 'com.devinrsmith.example.App1'
+applicationDefaultJvmArgs = ["-Xms256m", "-Xmx256m"]
+
+dependencies {
+  implementation project(':common')
+}

@@ -1,0 +1,26 @@
+plugins {
+  id 'com.bmuschko.docker-java-application' version '4.0.3' apply false
+}
+
+subprojects {
+  repositories {
+    jcenter()
+  }
+}
+
+configure([ project(':app1'), project(':app2') ]) {
+  apply plugin: 'com.bmuschko.docker-java-application'
+
+  docker {
+    javaApplication {
+      tag = "gcr.io/${gcpProject}/${project.group}/${project.name}:${project.version}".toString()
+    }
+    /*
+    registryCredentials {
+      url = 'https://gcr.io'
+      username = '_json_key'
+      password = file('keyfile.json').text
+    }
+    */
+  }  
+}

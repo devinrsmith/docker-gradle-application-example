@@ -1,0 +1,10 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+mainClassName = 'com.devinrsmith.example.App2'
+
+dependencies {
+  implementation project(':common')
+}

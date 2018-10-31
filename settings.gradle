@@ -1,0 +1,13 @@
+// Prepare for Gradle 5.0
+// https://docs.gradle.org/4.10.2/userguide/publishing_maven.html#publishing_maven:deferred_configuration
+enableFeaturePreview('STABLE_PUBLISHING')
+
+// Prepare for Gradle 5.0
+// https://docs.gradle.org/4.10.2/userguide/java_library_plugin.html#example_declaring_api_and_implementation_dependencies
+enableFeaturePreview('IMPROVED_POM_SUPPORT')
+
+rootProject.name = 'application-example'
+
+include 'common'
+include 'app1'
+include 'app2'
